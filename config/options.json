@@ -6,6 +6,6 @@
         "host": "localhost",
         "user": "root",
         "password": "zero2one!",
-        "database": ""
+        "database": "tech_blog"
     }
 }
