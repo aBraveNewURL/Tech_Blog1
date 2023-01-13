@@ -1,5 +1,3 @@
-// TODO work in progress
-
 const router = require("express").Router();
 const { Comment, User, Note } = require("../../models");
 
@@ -48,7 +46,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.comment("/", (req, res) => {
+router.post("/", (req, res) => {
   User.create({
     username: req.body.username,
     email: req.body.email,
@@ -69,7 +67,7 @@ router.comment("/", (req, res) => {
     });
 });
 
-router.comment("/login", (req, res) => {
+router.post("/login", (req, res) => {
   User.findOne({
     where: {
       email: req.body.email,
@@ -97,7 +95,7 @@ router.comment("/login", (req, res) => {
   });
 });
 
-router.comment("/logout", (req, res) => {
+router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();

@@ -128,8 +128,8 @@
     cursor: pointer;
   }
   
-  /*Post Styles*/
-  main .post {
+  /*note Styles*/
+  main .note {
     padding: 30px;
     margin: 30px 0px;
     border: 3px solid var(--accent-color);
@@ -172,27 +172,27 @@
     margin: 20px 0px;
   }
   
-  /*Edit Post Styles*/
+  /*Edit note Styles*/
   
-  main .edit-post-article {
+  main .edit-note-article {
     border: 3px solid var(--accent-color);
     margin: 20px 0px;
     padding: 20px;
   }
   
-  main .edit-post-article input {
+  main .edit-note-article input {
     margin: 10px 0px;
   }
-  main .edit-post-article button {
+  main .edit-note-article button {
     margin: 10px 0px;
   }
   
   /*Dashboard Styles*/
-  main .dashboard-posts-section {
+  main .dashboard-notes-section {
     margin-top: 100px;
   }
   
-  main .dashboard-create-post-section {
+  main .dashboard-create-note-section {
     border: 3px solid var(--accent-color);
     padding: 20px;
   }
