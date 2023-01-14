@@ -5,7 +5,7 @@ const { Note, User, Comment } = require("../models");
 router.get("/", (req, res) => {
   console.log(req.session);
   Note.findAll({
-    attributes: ["id", "note_text", "title", "created_at"],
+    attributes: ["id", "category", "description", "gallery_id"],
     order: [["created_at", "DESC"]],
     include: [
       {
@@ -41,7 +41,7 @@ router.get("/note/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "note_text", "title", "created_at"],
+    attributes: ["id", "category", "description", "gallery_id"],
     include: [
       {
         model: Comment,
@@ -65,7 +65,7 @@ router.get("/note/:id", (req, res) => {
 
       const note = dbnoteData.get({ plain: true });
 
-      res.render("single-note", {
+      res.render("singlePost", {
         note,
         loggedIn: req.session.loggedIn,
       });
@@ -81,8 +81,23 @@ router.get("/login", (req, res) => {
     res.redirect("/");
     return;
   }
-
   res.render("login");
+});
+
+router.get("/dashboard", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("dashboard");
+});
+
+router.get("/signup", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/signup");
+    return;
+  }
+  res.render("register");
 });
 
 module.exports = router;
