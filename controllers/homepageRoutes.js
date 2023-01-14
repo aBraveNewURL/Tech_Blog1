@@ -92,6 +92,14 @@ router.get("/dashboard", (req, res) => {
   res.render("dashboard");
 });
 
+router.get("/dashboard/newpost", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/homepage");
+    return;
+  }
+  res.render("newNote");
+});
+
 router.get("/signup", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/signup");
