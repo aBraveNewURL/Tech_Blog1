@@ -1,0 +1,18 @@
+    <div class="row justify-content-center">
+    <div class="col-12 col-sm-6 mb-5">
+      <h2 class="pb-3 border-bottom border-secondary">Post</h2>
+      <form>
+        <div class="mb-3">
+          <label for="blogTitle" class="form-label">Title</label>
+          <textarea type="text" class="form-control" id="blogTitle">{{blog.title}}</textarea>
+        </div>
+        <div class="mb-3">
+          <label for="blogContent" class="form-label">Content</label>
+          <textarea type="text" class="form-control" id="blogContent">{{blog.description}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-outline-success cardBtn bg-dark d-flex justify-content-center" id="editSubmit" data-userid="{{userId}}" data-blogid="{{blog.id}}">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/scripts/edit.js"></script>
