@@ -16,7 +16,7 @@ console.log(blog_id)
           console.log(response)
           location.replace(`/dashboard`);
         } else {
-          alert('Edit post failed T_T');
+          alert('Failed to edit post.');
         }
       } 
     });

@@ -1,9 +1,8 @@
 $('#commentSubmit').click(async event => {
     event.preventDefault();
     const comment = $('#addComment').val().trim();
-    const user_id = event.target.dataset.userid;
     const blog_id = event.target.dataset.blog;
-   
+    const user_id = event.target.dataset.userid;
   
     if (comment && user_id && blog_id) {
       const response = await fetch('/api/comment/create', {
@@ -15,7 +14,7 @@ $('#commentSubmit').click(async event => {
       if (response.ok) {
         location.replace(`/blog/${blog_id}`);
       } else {
-        alert('Add comment failed T_T');
+        alert('Failed to add comment.');
       }
     } else {
       location.replace(`/login`);

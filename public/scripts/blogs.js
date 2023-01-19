@@ -14,12 +14,12 @@ $('#post-delete-click').click(async event => {
           if (response.ok) {
             location.replace(`/dashboard`);
           } else {
-            alert('Delete post failed T_T');
+            alert('Failed to delete post');
           }
 
     }
     else{
-        alert("Delete post failed T_T")
+        alert("only the blog creator can delete me")
     }
 
 })
@@ -34,7 +34,7 @@ $('#post-edit-click').click(async event => {
         location.replace(`/api/blogs/edit/${blog_id}`)
     }
     else{
-        alert("Delete post failed T_T")
+        alert("only the blog creator can edit me")
     }
 
 })

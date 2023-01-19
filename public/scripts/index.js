@@ -25,7 +25,7 @@ $(".logout").click(async event => {
     if (response.ok) {
         location.replace('/');
     } else {
-        alert('Log out failed T_T');
+        alert('Failed to log out.');
     }
 });
 

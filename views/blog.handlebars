@@ -5,7 +5,7 @@
             <div class="cardInfo">
                 <div class="cTitle bg-dark">
                     <h5>{{blog.title}}</h5>
-                    <h6>Created by: {{blog.username}} at {{blog.createdAt}}</h6>
+                    <h6>Written by: {{blog.username}} at {{blog.createdAt}}</h6>
                 </div>
                 <p class="cDescription">{{blog.description}}</p>
             </div>
@@ -13,9 +13,9 @@
     </div>
 </div>
 <div class="post-options">
-<button class="bg-dark btn btn-outline-success" id="post-edit-click" data-blog="{{blog.id}}" data-userId="{{userId}}" data-blogCreator="{{blog.user_id}}">Edit</button>
+<button class="bg-dark btn btn-outline-success" id="post-edit-click" data-blog="{{blog.id}}" data-userId="{{userId}}" data-blogCreator="{{blog.user_id}}">Edit Post</button>
 </button>
-  <button id = "post-delete-click" class="btn bg-dark btn-outline-danger" data-blog="{{blog.id}}" data-userId="{{userId}}" data-blogCreator="{{blog.user_id}}">Delete</button>
+  <button id = "post-delete-click" class="btn bg-dark btn-outline-danger" data-blog="{{blog.id}}" data-userId="{{userId}}" data-blogCreator="{{blog.user_id}}">Delete Post</button>
 </button>
 </div>
   <div class="row mb-3">
@@ -36,7 +36,7 @@
       <p>{{comment.comment}}</p>
     </div>
     <div class="col-1">
-      <button class="btn bg-dark btn-outline-danger d-flex justify-content-center commentDelete" data-blog="{{blog.id}}" data-commentID="{{comment.id}}">X</button>
+      <button class="btn bg-dark btn-outline-danger d-flex justify-content-center commentDelete" data-blog="{{blog.id}}" data-commentID="{{comment.id}}">❌</button>
     </div>
   </div>
   {{/each}}

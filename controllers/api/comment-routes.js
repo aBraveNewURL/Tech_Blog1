@@ -9,7 +9,7 @@ router.post('/create', async (req, res) => {
             blog_id: req.body.blog_id
         });
         res.status(200).json(dbCommentData)
-    } catch (err) {
+    } catch (err){
         console.log(err);
         res.status(500).json(err);
     }
@@ -17,9 +17,9 @@ router.post('/create', async (req, res) => {
 
 router.delete('/destroy/:id', async (req, res) => {
     try {
-        const dbDeleteCommentData = await Comments.destroy({ where: { id: req.params.id } })
-        res.status(200).json(dbDeleteCommentData)
-    } catch (err) {
+        const dbDeleteCommentData = await Comments.destroy({ where: {id:req.params.id}})
+       res.status(200).json(dbDeleteCommentData)
+    } catch (err){
         console.log(err);
         res.status(500).json(err);
     }
