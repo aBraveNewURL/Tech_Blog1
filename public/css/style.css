@@ -1,28 +1,28 @@
 
 html {
-    background-color: rgb(145, 145, 145);
-    color: white;
+    background-color: rgbrgb(248, 249, 204);
+    color: black;
 }
 
 body{
-    background-color:  rgb(145, 145, 145);;
+    background-color:  rgb(248, 249, 204);
 }
 .collapser{
-    background-color: rgb(165, 165, 165);
+    background-color:  rgb(248, 249, 204);
 }
 .collapser:hover{
     background-color: rgb(109, 109, 109);
 }
 .headerText { 
-    color: rgb(165, 165, 165); 
+    color: black; 
 }
 
 .headerText:hover { 
-    color: rgb(68, 241, 0); 
+    color: rgb(241, 125, 0); 
 }
 
 .cTitle {
-    color: rgb(165, 165, 165);
+    color:  blueviolet;
     padding: 1%; 
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -35,7 +35,7 @@ body{
 .main {
     margin:.5%;
     height:100vh;
-    background-color: rgb(145, 145, 145);
+    background-color:  rgb(248, 249, 204);
 }
 
 .cardBreak{
@@ -45,13 +45,13 @@ body{
 }
 .card{
     min-height: 10vh;
-    background-color:  rgb(145, 145, 145);
+    background-color:  rgb(248, 249, 204);
 }
 .cDescription{
    max-height: 350px;  
    min-height: 350px;
    padding: 1%;
-   color: rgb(255, 255, 255);
+   color: black;
    overflow: auto;
 }
 
@@ -108,7 +108,7 @@ body{
 
   .post-edit:hover {
     font-size: 16px;
-    color: rgb(149, 241, 149);
+    color: rgb(244, 149, 41);
     border: 5px;
     border-style: solid;
     opacity: .5;
